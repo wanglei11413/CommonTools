@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setRootViewController() {
         self.window                     = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = nil
-        let rootVC                      = BaseViewController()
+        let rootVC                      = BaseNavigationController.init(rootViewController: HomeViewController())
         self.window?.rootViewController  = rootVC
         self.window?.makeKeyAndVisible()
     }

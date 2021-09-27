@@ -45,8 +45,10 @@ class WLCircleSlider: UIControl {
         didSet {
             let aaa = CGFloat(360 - startAngle + endAngle) / CGFloat(maximumValue) * CGFloat(currentValue)
             angle = startAngle + Int(aaa)
+            self.setNeedsDisplay()
         }
     }
+    /// 阴影颜色
     var shadowColor: UIColor = .clear {
         didSet {
             self.setNeedsDisplay()
@@ -55,7 +57,7 @@ class WLCircleSlider: UIControl {
     
     // MARK: - private属性x
     private var angle: Int      = 0
-    private var radius: CGFloat = 0
+    private var radius: CGFloat = 130
     // MARK: - END
 
     override init(frame: CGRect) {
@@ -73,7 +75,6 @@ class WLCircleSlider: UIControl {
     
     private func makeUI() {
         self.backgroundColor = .clear
-        radius = self.frame.size.height/2 - lineWidth - thumbSize - 5
     }
     
     // MARK: - draw
@@ -108,6 +109,10 @@ class WLCircleSlider: UIControl {
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         sendActions(for: .editingDidBegin)
+        
+        let lastPoint = touch.location(in: self)
+        moveHandle(point: lastPoint)
+        
         return true
     }
     
@@ -138,23 +143,23 @@ class WLCircleSlider: UIControl {
     /// 移动thumb的位置
     /// - Parameter point: 要移到的位置
     private func moveHandle(point: CGPoint) {
-        let centerPoint         = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
+        let centerPoint        = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
         let currentAngleDouble = floor(angleFromNorth(p1: centerPoint, p2: point))
-        let currentAngle        = Int(currentAngleDouble)
-        // 计算当前的value
-        currentValue = valueFromAngle(angle: currentAngle)
-        if delegate != nil {
-            delegate!.sliderValueChanged?(sender: self, value: currentValue)
-        }
+        let currentAngle       = Int(currentAngleDouble)
         // 滑动到最大值
         if currentAngle > endAngle && currentAngle < startAngle {
             return
         } else {
-            if currentAngle <= endAngle {
+            if currentAngle < endAngle {
                 angle = currentAngle + 360
             } else {
                 angle = currentAngle
             }
+        }
+        // 计算当前的value
+        currentValue = valueFromAngle(angle: currentAngle)
+        if delegate != nil {
+            delegate!.sliderValueChanged?(sender: self, value: currentValue)
         }
         self.setNeedsDisplay()
     }
@@ -191,11 +196,16 @@ class WLCircleSlider: UIControl {
     /// - Returns: value值
     private func valueFromAngle(angle: Int) -> Int {
         if angle > endAngle && angle < startAngle {
-            return 0
+            let aaa = (startAngle - endAngle)/2 + endAngle
+            if angle < aaa {
+                return 100
+            } else {
+                return 0
+            }
         }
         var angle1 = angle - startAngle
         // 如果angle1小于0了，代表已经滑动了一圈
-        if angle1 < 0 {
+        if angle1 <= 0 {
             // 此时的角度应该如下
             angle1 = 360 - startAngle + angle
         }

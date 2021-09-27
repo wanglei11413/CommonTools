@@ -16,8 +16,6 @@
 		451446952701779800FB0FB6 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446932701779700FB0FB6 /* Block.swift */; };
 		45144697270177D800FB0FB6 /* HUDTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45144696270177D800FB0FB6 /* HUDTool.swift */; };
 		45144698270177D800FB0FB6 /* HUDTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45144696270177D800FB0FB6 /* HUDTool.swift */; };
-		4514469A27018EB700FB0FB6 /* WLCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469927018EB700FB0FB6 /* WLCircleSlider.swift */; };
-		4514469B27018EB700FB0FB6 /* WLCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469927018EB700FB0FB6 /* WLCircleSlider.swift */; };
 		4514469D27019AEA00FB0FB6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469C27019AEA00FB0FB6 /* BaseNavigationController.swift */; };
 		4514469E27019AEA00FB0FB6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469C27019AEA00FB0FB6 /* BaseNavigationController.swift */; };
 		451446A027019B5200FB0FB6 /* RequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469F27019B5200FB0FB6 /* RequestTool.swift */; };
@@ -26,6 +24,9 @@
 		451446A427019B7000FB0FB6 /* ApiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446A227019B7000FB0FB6 /* ApiSettings.swift */; };
 		451446A727019BB500FB0FB6 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446A627019BB500FB0FB6 /* BaseModel.swift */; };
 		451446A827019BB500FB0FB6 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446A627019BB500FB0FB6 /* BaseModel.swift */; };
+		451446AA2701B5C900FB0FB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446A92701B5C900FB0FB6 /* HomeViewController.swift */; };
+		451446AC2701B88B00FB0FB6 /* WLCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446AB2701B88B00FB0FB6 /* WLCircleSlider.swift */; };
+		451446AD2701B88B00FB0FB6 /* WLCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446AB2701B88B00FB0FB6 /* WLCircleSlider.swift */; };
 		45D1F77926FD769E00A98404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F77826FD769E00A98404 /* AppDelegate.swift */; };
 		45D1F78526FD76A000A98404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1F78426FD76A000A98404 /* Assets.xcassets */; };
 		45D1F78826FD76A000A98404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D1F78626FD76A000A98404 /* LaunchScreen.storyboard */; };
@@ -77,11 +78,12 @@
 		451446902700416B00FB0FB6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		451446932701779700FB0FB6 /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		45144696270177D800FB0FB6 /* HUDTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDTool.swift; sourceTree = "<group>"; };
-		4514469927018EB700FB0FB6 /* WLCircleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLCircleSlider.swift; sourceTree = "<group>"; };
 		4514469C27019AEA00FB0FB6 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		4514469F27019B5200FB0FB6 /* RequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTool.swift; sourceTree = "<group>"; };
 		451446A227019B7000FB0FB6 /* ApiSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiSettings.swift; sourceTree = "<group>"; };
 		451446A627019BB500FB0FB6 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		451446A92701B5C900FB0FB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		451446AB2701B88B00FB0FB6 /* WLCircleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLCircleSlider.swift; sourceTree = "<group>"; };
 		45D1F77526FD769E00A98404 /* DavinciCN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DavinciCN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D1F77826FD769E00A98404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D1F78426FD76A000A98404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				45D1F7CE26FD816C00A98404 /* DavinciCN.entitlements */,
 				45D1F77826FD769E00A98404 /* AppDelegate.swift */,
+				451446A92701B5C900FB0FB6 /* HomeViewController.swift */,
 				451446A527019BA900FB0FB6 /* Model */,
 				45D1F7B126FD7FD900A98404 /* Resources */,
 				45D1F7AF26FD7FB300A98404 /* Config */,
@@ -257,8 +260,8 @@
 		45D1F7B326FD805C00A98404 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				4514469927018EB700FB0FB6 /* WLCircleSlider.swift */,
 				45D1F7DC26FD837D00A98404 /* CommonTools.swift */,
+				451446AB2701B88B00FB0FB6 /* WLCircleSlider.swift */,
 				45144696270177D800FB0FB6 /* HUDTool.swift */,
 				45D1F7E526FDA0D100A98404 /* GCDTimerTool.swift */,
 				451446932701779700FB0FB6 /* Block.swift */,
@@ -508,11 +511,12 @@
 				451446912700416B00FB0FB6 /* BaseViewController.swift in Sources */,
 				451446942701779800FB0FB6 /* Block.swift in Sources */,
 				45D1F7E326FD83E400A98404 /* ExtensionTools.swift in Sources */,
+				451446AA2701B5C900FB0FB6 /* HomeViewController.swift in Sources */,
 				451446A027019B5200FB0FB6 /* RequestTool.swift in Sources */,
 				45D1F7BB26FD808C00A98404 /* UIViewController+RTRootNavigationController.m in Sources */,
+				451446AC2701B88B00FB0FB6 /* WLCircleSlider.swift in Sources */,
 				45D1F7E626FDA0D100A98404 /* GCDTimerTool.swift in Sources */,
 				4514468A27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */,
-				4514469A27018EB700FB0FB6 /* WLCircleSlider.swift in Sources */,
 				45D1F7C526FD810200A98404 /* UIView+Autolayout.m in Sources */,
 				45D1F7EA26FDAA0500A98404 /* UIColor+extension.m in Sources */,
 				45D1F7DA26FD834200A98404 /* AppSettings.swift in Sources */,
@@ -547,9 +551,9 @@
 				45D1F7BC26FD808C00A98404 /* UIViewController+RTRootNavigationController.m in Sources */,
 				45D1F7E726FDA0D100A98404 /* GCDTimerTool.swift in Sources */,
 				4514468B27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */,
-				4514469B27018EB700FB0FB6 /* WLCircleSlider.swift in Sources */,
 				45D1F7C626FD810200A98404 /* UIView+Autolayout.m in Sources */,
 				45D1F7EB26FDAA0500A98404 /* UIColor+extension.m in Sources */,
+				451446AD2701B88B00FB0FB6 /* WLCircleSlider.swift in Sources */,
 				45D1F7DB26FD834200A98404 /* AppSettings.swift in Sources */,
 				45D1F7CD26FD815300A98404 /* KeychainItemWrapper.m in Sources */,
 				45D1F79E26FD76A000A98404 /* DavinciCNUITests.swift in Sources */,
