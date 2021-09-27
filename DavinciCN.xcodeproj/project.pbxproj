@@ -1,0 +1,878 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34E82E47B6420B598112372C /* Pods_DavinciCN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4244D8C90F61B47DE78997D /* Pods_DavinciCN.framework */; };
+		4514468A27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */; };
+		4514468B27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */; };
+		451446912700416B00FB0FB6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446902700416B00FB0FB6 /* BaseViewController.swift */; };
+		451446922700416B00FB0FB6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446902700416B00FB0FB6 /* BaseViewController.swift */; };
+		451446942701779800FB0FB6 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446932701779700FB0FB6 /* Block.swift */; };
+		451446952701779800FB0FB6 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446932701779700FB0FB6 /* Block.swift */; };
+		45144697270177D800FB0FB6 /* HUDTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45144696270177D800FB0FB6 /* HUDTool.swift */; };
+		45144698270177D800FB0FB6 /* HUDTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45144696270177D800FB0FB6 /* HUDTool.swift */; };
+		4514469A27018EB700FB0FB6 /* WLCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469927018EB700FB0FB6 /* WLCircleSlider.swift */; };
+		4514469B27018EB700FB0FB6 /* WLCircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469927018EB700FB0FB6 /* WLCircleSlider.swift */; };
+		4514469D27019AEA00FB0FB6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469C27019AEA00FB0FB6 /* BaseNavigationController.swift */; };
+		4514469E27019AEA00FB0FB6 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469C27019AEA00FB0FB6 /* BaseNavigationController.swift */; };
+		451446A027019B5200FB0FB6 /* RequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469F27019B5200FB0FB6 /* RequestTool.swift */; };
+		451446A127019B5200FB0FB6 /* RequestTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514469F27019B5200FB0FB6 /* RequestTool.swift */; };
+		451446A327019B7000FB0FB6 /* ApiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446A227019B7000FB0FB6 /* ApiSettings.swift */; };
+		451446A427019B7000FB0FB6 /* ApiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446A227019B7000FB0FB6 /* ApiSettings.swift */; };
+		451446A727019BB500FB0FB6 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446A627019BB500FB0FB6 /* BaseModel.swift */; };
+		451446A827019BB500FB0FB6 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451446A627019BB500FB0FB6 /* BaseModel.swift */; };
+		45D1F77926FD769E00A98404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F77826FD769E00A98404 /* AppDelegate.swift */; };
+		45D1F78526FD76A000A98404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D1F78426FD76A000A98404 /* Assets.xcassets */; };
+		45D1F78826FD76A000A98404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D1F78626FD76A000A98404 /* LaunchScreen.storyboard */; };
+		45D1F79326FD76A000A98404 /* DavinciCNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F79226FD76A000A98404 /* DavinciCNTests.swift */; };
+		45D1F79E26FD76A000A98404 /* DavinciCNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F79D26FD76A000A98404 /* DavinciCNUITests.swift */; };
+		45D1F7BB26FD808C00A98404 /* UIViewController+RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7B626FD808C00A98404 /* UIViewController+RTRootNavigationController.m */; };
+		45D1F7BC26FD808C00A98404 /* UIViewController+RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7B626FD808C00A98404 /* UIViewController+RTRootNavigationController.m */; };
+		45D1F7BD26FD808C00A98404 /* RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7BA26FD808C00A98404 /* RTRootNavigationController.m */; };
+		45D1F7BE26FD808C00A98404 /* RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7BA26FD808C00A98404 /* RTRootNavigationController.m */; };
+		45D1F7C526FD810200A98404 /* UIView+Autolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7C126FD810200A98404 /* UIView+Autolayout.m */; };
+		45D1F7C626FD810200A98404 /* UIView+Autolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7C126FD810200A98404 /* UIView+Autolayout.m */; };
+		45D1F7C726FD810200A98404 /* WLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7C326FD810200A98404 /* WLAlertView.m */; };
+		45D1F7C826FD810200A98404 /* WLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7C326FD810200A98404 /* WLAlertView.m */; };
+		45D1F7CC26FD815300A98404 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7CA26FD815300A98404 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		45D1F7CD26FD815300A98404 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7CA26FD815300A98404 /* KeychainItemWrapper.m */; };
+		45D1F7DA26FD834200A98404 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7D926FD834200A98404 /* AppSettings.swift */; };
+		45D1F7DB26FD834200A98404 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7D926FD834200A98404 /* AppSettings.swift */; };
+		45D1F7DD26FD837D00A98404 /* CommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7DC26FD837D00A98404 /* CommonTools.swift */; };
+		45D1F7DE26FD837D00A98404 /* CommonTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7DC26FD837D00A98404 /* CommonTools.swift */; };
+		45D1F7E326FD83E400A98404 /* ExtensionTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7E226FD83E400A98404 /* ExtensionTools.swift */; };
+		45D1F7E426FD83E400A98404 /* ExtensionTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7E226FD83E400A98404 /* ExtensionTools.swift */; };
+		45D1F7E626FDA0D100A98404 /* GCDTimerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7E526FDA0D100A98404 /* GCDTimerTool.swift */; };
+		45D1F7E726FDA0D100A98404 /* GCDTimerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7E526FDA0D100A98404 /* GCDTimerTool.swift */; };
+		45D1F7EA26FDAA0500A98404 /* UIColor+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7E926FDAA0500A98404 /* UIColor+extension.m */; };
+		45D1F7EB26FDAA0500A98404 /* UIColor+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D1F7E926FDAA0500A98404 /* UIColor+extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45D1F78F26FD76A000A98404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45D1F76D26FD769E00A98404 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45D1F77426FD769E00A98404;
+			remoteInfo = DavinciCN;
+		};
+		45D1F79A26FD76A000A98404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45D1F76D26FD769E00A98404 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45D1F77426FD769E00A98404;
+			remoteInfo = DavinciCN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A2A6824873DC2542E818B6F /* Pods-DavinciCN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DavinciCN.release.xcconfig"; path = "Target Support Files/Pods-DavinciCN/Pods-DavinciCN.release.xcconfig"; sourceTree = "<group>"; };
+		4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BuriedPoint.m"; sourceTree = "<group>"; };
+		4514468927001C1700FB0FB6 /* UIButton+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BuriedPoint.h"; sourceTree = "<group>"; };
+		451446902700416B00FB0FB6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		451446932701779700FB0FB6 /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		45144696270177D800FB0FB6 /* HUDTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDTool.swift; sourceTree = "<group>"; };
+		4514469927018EB700FB0FB6 /* WLCircleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WLCircleSlider.swift; sourceTree = "<group>"; };
+		4514469C27019AEA00FB0FB6 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		4514469F27019B5200FB0FB6 /* RequestTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTool.swift; sourceTree = "<group>"; };
+		451446A227019B7000FB0FB6 /* ApiSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiSettings.swift; sourceTree = "<group>"; };
+		451446A627019BB500FB0FB6 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		45D1F77526FD769E00A98404 /* DavinciCN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DavinciCN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D1F77826FD769E00A98404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45D1F78426FD76A000A98404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45D1F78726FD76A000A98404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45D1F78926FD76A000A98404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D1F78E26FD76A000A98404 /* DavinciCNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DavinciCNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D1F79226FD76A000A98404 /* DavinciCNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DavinciCNTests.swift; sourceTree = "<group>"; };
+		45D1F79426FD76A000A98404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D1F79926FD76A000A98404 /* DavinciCNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DavinciCNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45D1F79D26FD76A000A98404 /* DavinciCNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DavinciCNUITests.swift; sourceTree = "<group>"; };
+		45D1F79F26FD76A000A98404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45D1F7AB26FD7F6800A98404 /* DavinciCN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DavinciCN-Bridging-Header.h"; sourceTree = "<group>"; };
+		45D1F7B626FD808C00A98404 /* UIViewController+RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RTRootNavigationController.m"; sourceTree = "<group>"; };
+		45D1F7B726FD808C00A98404 /* RTViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
+		45D1F7B826FD808C00A98404 /* RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRootNavigationController.h; sourceTree = "<group>"; };
+		45D1F7B926FD808C00A98404 /* UIViewController+RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RTRootNavigationController.h"; sourceTree = "<group>"; };
+		45D1F7BA26FD808C00A98404 /* RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRootNavigationController.m; sourceTree = "<group>"; };
+		45D1F7C026FD810200A98404 /* WLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLAlertView.h; sourceTree = "<group>"; };
+		45D1F7C126FD810200A98404 /* UIView+Autolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Autolayout.m"; sourceTree = "<group>"; };
+		45D1F7C226FD810200A98404 /* WLAlertViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLAlertViewProtocol.h; sourceTree = "<group>"; };
+		45D1F7C326FD810200A98404 /* WLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLAlertView.m; sourceTree = "<group>"; };
+		45D1F7C426FD810200A98404 /* UIView+Autolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Autolayout.h"; sourceTree = "<group>"; };
+		45D1F7CA26FD815300A98404 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		45D1F7CB26FD815300A98404 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		45D1F7CE26FD816C00A98404 /* DavinciCN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DavinciCN.entitlements; sourceTree = "<group>"; };
+		45D1F7D926FD834200A98404 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		45D1F7DC26FD837D00A98404 /* CommonTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTools.swift; sourceTree = "<group>"; };
+		45D1F7E226FD83E400A98404 /* ExtensionTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTools.swift; sourceTree = "<group>"; };
+		45D1F7E526FDA0D100A98404 /* GCDTimerTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDTimerTool.swift; sourceTree = "<group>"; };
+		45D1F7E826FDAA0500A98404 /* UIColor+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+extension.h"; sourceTree = "<group>"; };
+		45D1F7E926FDAA0500A98404 /* UIColor+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extension.m"; sourceTree = "<group>"; };
+		C4244D8C90F61B47DE78997D /* Pods_DavinciCN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DavinciCN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3B428879ED7287418D01612 /* Pods-DavinciCN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DavinciCN.debug.xcconfig"; path = "Target Support Files/Pods-DavinciCN/Pods-DavinciCN.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45D1F77226FD769E00A98404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34E82E47B6420B598112372C /* Pods_DavinciCN.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D1F78B26FD76A000A98404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D1F79626FD76A000A98404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F88ECFE17B5CE1724099CFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4244D8C90F61B47DE78997D /* Pods_DavinciCN.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4514468C27001C2300FB0FB6 /* OCTools */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F7E826FDAA0500A98404 /* UIColor+extension.h */,
+				45D1F7E926FDAA0500A98404 /* UIColor+extension.m */,
+				4514468927001C1700FB0FB6 /* UIButton+BuriedPoint.h */,
+				4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */,
+			);
+			path = OCTools;
+			sourceTree = "<group>";
+		};
+		451446A527019BA900FB0FB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				451446A627019BB500FB0FB6 /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45D1F76C26FD769E00A98404 = {
+			isa = PBXGroup;
+			children = (
+				45D1F77726FD769E00A98404 /* DavinciCN */,
+				45D1F79126FD76A000A98404 /* DavinciCNTests */,
+				45D1F79C26FD76A000A98404 /* DavinciCNUITests */,
+				45D1F77626FD769E00A98404 /* Products */,
+				9209DA93CE374F7B46259817 /* Pods */,
+				2F88ECFE17B5CE1724099CFF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		45D1F77626FD769E00A98404 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F77526FD769E00A98404 /* DavinciCN.app */,
+				45D1F78E26FD76A000A98404 /* DavinciCNTests.xctest */,
+				45D1F79926FD76A000A98404 /* DavinciCNUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45D1F77726FD769E00A98404 /* DavinciCN */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F7CE26FD816C00A98404 /* DavinciCN.entitlements */,
+				45D1F77826FD769E00A98404 /* AppDelegate.swift */,
+				451446A527019BA900FB0FB6 /* Model */,
+				45D1F7B126FD7FD900A98404 /* Resources */,
+				45D1F7AF26FD7FB300A98404 /* Config */,
+				45D1F7B226FD7FED00A98404 /* Request */,
+				45D1F7B326FD805C00A98404 /* Tools */,
+				45D1F7B426FD806400A98404 /* Vender */,
+			);
+			path = DavinciCN;
+			sourceTree = "<group>";
+		};
+		45D1F79126FD76A000A98404 /* DavinciCNTests */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F79226FD76A000A98404 /* DavinciCNTests.swift */,
+				45D1F79426FD76A000A98404 /* Info.plist */,
+			);
+			path = DavinciCNTests;
+			sourceTree = "<group>";
+		};
+		45D1F79C26FD76A000A98404 /* DavinciCNUITests */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F79D26FD76A000A98404 /* DavinciCNUITests.swift */,
+				45D1F79F26FD76A000A98404 /* Info.plist */,
+			);
+			path = DavinciCNUITests;
+			sourceTree = "<group>";
+		};
+		45D1F7AF26FD7FB300A98404 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F7CF26FD81DD00A98404 /* BaseVC */,
+				45D1F7AB26FD7F6800A98404 /* DavinciCN-Bridging-Header.h */,
+				45D1F78926FD76A000A98404 /* Info.plist */,
+				45D1F78626FD76A000A98404 /* LaunchScreen.storyboard */,
+				45D1F7D926FD834200A98404 /* AppSettings.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		45D1F7B126FD7FD900A98404 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F78426FD76A000A98404 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		45D1F7B226FD7FED00A98404 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				451446A227019B7000FB0FB6 /* ApiSettings.swift */,
+				4514469F27019B5200FB0FB6 /* RequestTool.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		45D1F7B326FD805C00A98404 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				4514469927018EB700FB0FB6 /* WLCircleSlider.swift */,
+				45D1F7DC26FD837D00A98404 /* CommonTools.swift */,
+				45144696270177D800FB0FB6 /* HUDTool.swift */,
+				45D1F7E526FDA0D100A98404 /* GCDTimerTool.swift */,
+				451446932701779700FB0FB6 /* Block.swift */,
+				45D1F7E226FD83E400A98404 /* ExtensionTools.swift */,
+				4514468C27001C2300FB0FB6 /* OCTools */,
+				45D1F7C926FD815300A98404 /* KeyChain */,
+				45D1F7BF26FD810200A98404 /* WLAlertView */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		45D1F7B426FD806400A98404 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F7B526FD808C00A98404 /* RTNavigation */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		45D1F7B526FD808C00A98404 /* RTNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F7B726FD808C00A98404 /* RTViewControllerAnimatedTransitioning.h */,
+				45D1F7B826FD808C00A98404 /* RTRootNavigationController.h */,
+				45D1F7BA26FD808C00A98404 /* RTRootNavigationController.m */,
+				45D1F7B926FD808C00A98404 /* UIViewController+RTRootNavigationController.h */,
+				45D1F7B626FD808C00A98404 /* UIViewController+RTRootNavigationController.m */,
+			);
+			path = RTNavigation;
+			sourceTree = "<group>";
+		};
+		45D1F7BF26FD810200A98404 /* WLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F7C226FD810200A98404 /* WLAlertViewProtocol.h */,
+				45D1F7C026FD810200A98404 /* WLAlertView.h */,
+				45D1F7C326FD810200A98404 /* WLAlertView.m */,
+				45D1F7C426FD810200A98404 /* UIView+Autolayout.h */,
+				45D1F7C126FD810200A98404 /* UIView+Autolayout.m */,
+			);
+			path = WLAlertView;
+			sourceTree = "<group>";
+		};
+		45D1F7C926FD815300A98404 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				45D1F7CB26FD815300A98404 /* KeychainItemWrapper.h */,
+				45D1F7CA26FD815300A98404 /* KeychainItemWrapper.m */,
+			);
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		45D1F7CF26FD81DD00A98404 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				451446902700416B00FB0FB6 /* BaseViewController.swift */,
+				4514469C27019AEA00FB0FB6 /* BaseNavigationController.swift */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		9209DA93CE374F7B46259817 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3B428879ED7287418D01612 /* Pods-DavinciCN.debug.xcconfig */,
+				3A2A6824873DC2542E818B6F /* Pods-DavinciCN.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45D1F77426FD769E00A98404 /* DavinciCN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D1F7A226FD76A000A98404 /* Build configuration list for PBXNativeTarget "DavinciCN" */;
+			buildPhases = (
+				86A6929533C45034668BDA24 /* [CP] Check Pods Manifest.lock */,
+				45D1F77126FD769E00A98404 /* Sources */,
+				45D1F77226FD769E00A98404 /* Frameworks */,
+				45D1F77326FD769E00A98404 /* Resources */,
+				502A2ACA0444B7BFF21D476B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DavinciCN;
+			productName = DavinciCN;
+			productReference = 45D1F77526FD769E00A98404 /* DavinciCN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45D1F78D26FD76A000A98404 /* DavinciCNTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D1F7A526FD76A000A98404 /* Build configuration list for PBXNativeTarget "DavinciCNTests" */;
+			buildPhases = (
+				45D1F78A26FD76A000A98404 /* Sources */,
+				45D1F78B26FD76A000A98404 /* Frameworks */,
+				45D1F78C26FD76A000A98404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45D1F79026FD76A000A98404 /* PBXTargetDependency */,
+			);
+			name = DavinciCNTests;
+			productName = DavinciCNTests;
+			productReference = 45D1F78E26FD76A000A98404 /* DavinciCNTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		45D1F79826FD76A000A98404 /* DavinciCNUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45D1F7A826FD76A000A98404 /* Build configuration list for PBXNativeTarget "DavinciCNUITests" */;
+			buildPhases = (
+				45D1F79526FD76A000A98404 /* Sources */,
+				45D1F79626FD76A000A98404 /* Frameworks */,
+				45D1F79726FD76A000A98404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45D1F79B26FD76A000A98404 /* PBXTargetDependency */,
+			);
+			name = DavinciCNUITests;
+			productName = DavinciCNUITests;
+			productReference = 45D1F79926FD76A000A98404 /* DavinciCNUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45D1F76D26FD769E00A98404 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					45D1F77426FD769E00A98404 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					45D1F78D26FD76A000A98404 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 45D1F77426FD769E00A98404;
+					};
+					45D1F79826FD76A000A98404 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 45D1F77426FD769E00A98404;
+					};
+				};
+			};
+			buildConfigurationList = 45D1F77026FD769E00A98404 /* Build configuration list for PBXProject "DavinciCN" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45D1F76C26FD769E00A98404;
+			productRefGroup = 45D1F77626FD769E00A98404 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45D1F77426FD769E00A98404 /* DavinciCN */,
+				45D1F78D26FD76A000A98404 /* DavinciCNTests */,
+				45D1F79826FD76A000A98404 /* DavinciCNUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45D1F77326FD769E00A98404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D1F78826FD76A000A98404 /* LaunchScreen.storyboard in Resources */,
+				45D1F78526FD76A000A98404 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D1F78C26FD76A000A98404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D1F79726FD76A000A98404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		502A2ACA0444B7BFF21D476B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DavinciCN/Pods-DavinciCN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DavinciCN/Pods-DavinciCN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DavinciCN/Pods-DavinciCN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86A6929533C45034668BDA24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DavinciCN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45D1F77126FD769E00A98404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				451446A327019B7000FB0FB6 /* ApiSettings.swift in Sources */,
+				45144697270177D800FB0FB6 /* HUDTool.swift in Sources */,
+				451446912700416B00FB0FB6 /* BaseViewController.swift in Sources */,
+				451446942701779800FB0FB6 /* Block.swift in Sources */,
+				45D1F7E326FD83E400A98404 /* ExtensionTools.swift in Sources */,
+				451446A027019B5200FB0FB6 /* RequestTool.swift in Sources */,
+				45D1F7BB26FD808C00A98404 /* UIViewController+RTRootNavigationController.m in Sources */,
+				45D1F7E626FDA0D100A98404 /* GCDTimerTool.swift in Sources */,
+				4514468A27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */,
+				4514469A27018EB700FB0FB6 /* WLCircleSlider.swift in Sources */,
+				45D1F7C526FD810200A98404 /* UIView+Autolayout.m in Sources */,
+				45D1F7EA26FDAA0500A98404 /* UIColor+extension.m in Sources */,
+				45D1F7DA26FD834200A98404 /* AppSettings.swift in Sources */,
+				45D1F7CC26FD815300A98404 /* KeychainItemWrapper.m in Sources */,
+				45D1F77926FD769E00A98404 /* AppDelegate.swift in Sources */,
+				45D1F7C726FD810200A98404 /* WLAlertView.m in Sources */,
+				45D1F7DD26FD837D00A98404 /* CommonTools.swift in Sources */,
+				451446A727019BB500FB0FB6 /* BaseModel.swift in Sources */,
+				4514469D27019AEA00FB0FB6 /* BaseNavigationController.swift in Sources */,
+				45D1F7BD26FD808C00A98404 /* RTRootNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D1F78A26FD76A000A98404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45D1F79326FD76A000A98404 /* DavinciCNTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45D1F79526FD76A000A98404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				451446A427019B7000FB0FB6 /* ApiSettings.swift in Sources */,
+				45144698270177D800FB0FB6 /* HUDTool.swift in Sources */,
+				451446922700416B00FB0FB6 /* BaseViewController.swift in Sources */,
+				451446952701779800FB0FB6 /* Block.swift in Sources */,
+				45D1F7E426FD83E400A98404 /* ExtensionTools.swift in Sources */,
+				451446A127019B5200FB0FB6 /* RequestTool.swift in Sources */,
+				45D1F7BC26FD808C00A98404 /* UIViewController+RTRootNavigationController.m in Sources */,
+				45D1F7E726FDA0D100A98404 /* GCDTimerTool.swift in Sources */,
+				4514468B27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */,
+				4514469B27018EB700FB0FB6 /* WLCircleSlider.swift in Sources */,
+				45D1F7C626FD810200A98404 /* UIView+Autolayout.m in Sources */,
+				45D1F7EB26FDAA0500A98404 /* UIColor+extension.m in Sources */,
+				45D1F7DB26FD834200A98404 /* AppSettings.swift in Sources */,
+				45D1F7CD26FD815300A98404 /* KeychainItemWrapper.m in Sources */,
+				45D1F79E26FD76A000A98404 /* DavinciCNUITests.swift in Sources */,
+				45D1F7C826FD810200A98404 /* WLAlertView.m in Sources */,
+				45D1F7DE26FD837D00A98404 /* CommonTools.swift in Sources */,
+				451446A827019BB500FB0FB6 /* BaseModel.swift in Sources */,
+				4514469E27019AEA00FB0FB6 /* BaseNavigationController.swift in Sources */,
+				45D1F7BE26FD808C00A98404 /* RTRootNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45D1F79026FD76A000A98404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45D1F77426FD769E00A98404 /* DavinciCN */;
+			targetProxy = 45D1F78F26FD76A000A98404 /* PBXContainerItemProxy */;
+		};
+		45D1F79B26FD76A000A98404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45D1F77426FD769E00A98404 /* DavinciCN */;
+			targetProxy = 45D1F79A26FD76A000A98404 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45D1F78626FD76A000A98404 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45D1F78726FD76A000A98404 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45D1F7A026FD76A000A98404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45D1F7A126FD76A000A98404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45D1F7A326FD76A000A98404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B428879ED7287418D01612 /* Pods-DavinciCN.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DavinciCN/DavinciCN.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SBJYC39GA3;
+				INFOPLIST_FILE = DavinciCN/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.davinci.motor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DavinciCN/Config/DavinciCN-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		45D1F7A426FD76A000A98404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A2A6824873DC2542E818B6F /* Pods-DavinciCN.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DavinciCN/DavinciCN.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SBJYC39GA3;
+				INFOPLIST_FILE = DavinciCN/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.davinci.motor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DavinciCN/Config/DavinciCN-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		45D1F7A626FD76A000A98404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DavinciCNTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.davinci.motor.DavinciCNTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DavinciCN.app/DavinciCN";
+			};
+			name = Debug;
+		};
+		45D1F7A726FD76A000A98404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DavinciCNTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.davinci.motor.DavinciCNTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DavinciCN.app/DavinciCN";
+			};
+			name = Release;
+		};
+		45D1F7A926FD76A000A98404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DavinciCNUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.davinci.motor.DavinciCNUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DavinciCN;
+			};
+			name = Debug;
+		};
+		45D1F7AA26FD76A000A98404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DavinciCNUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.davinci.motor.DavinciCNUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DavinciCN;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45D1F77026FD769E00A98404 /* Build configuration list for PBXProject "DavinciCN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D1F7A026FD76A000A98404 /* Debug */,
+				45D1F7A126FD76A000A98404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45D1F7A226FD76A000A98404 /* Build configuration list for PBXNativeTarget "DavinciCN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D1F7A326FD76A000A98404 /* Debug */,
+				45D1F7A426FD76A000A98404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45D1F7A526FD76A000A98404 /* Build configuration list for PBXNativeTarget "DavinciCNTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D1F7A626FD76A000A98404 /* Debug */,
+				45D1F7A726FD76A000A98404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45D1F7A826FD76A000A98404 /* Build configuration list for PBXNativeTarget "DavinciCNUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45D1F7A926FD76A000A98404 /* Debug */,
+				45D1F7AA26FD76A000A98404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45D1F76D26FD769E00A98404 /* Project object */;
+}
