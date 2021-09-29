@@ -25,7 +25,8 @@ struct API {
         case .product:
             return "http://nats.intestcar.com:8329"
         case .developer:
-            return "http://122.9.2.216:3080"
+            return "https://api-cn-dev.davincimotor.com/"
+//            return "http://122.9.2.216:3080"
         }
     }()
     
@@ -64,6 +65,21 @@ struct API {
     
     /// 清空目的地导航历史记录
     static let clearNaviGoHistory = "/web-api/history/desination/delete_all"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /// 根据key获取内容
+    static let getSomethingData = "/content/api/Content/metadata"
+    
+    
+    /// 获取车辆信息（列表、详情）
+    static let getCarInfo = "/content/api/Product/vehicle-model"
 }
 
 
