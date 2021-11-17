@@ -1,6 +1,6 @@
 //
 //  AppSettings.swift
-//  DavinciCN
+//  CommonTools
 //  app的一些常用属性等等
 //  Created by Mac on 2021/9/24.
 //

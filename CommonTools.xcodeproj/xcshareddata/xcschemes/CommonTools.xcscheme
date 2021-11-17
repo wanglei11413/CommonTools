@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45D1F77426FD769E00A98404"
-               BuildableName = "DavinciCN.app"
-               BlueprintName = "DavinciCN"
-               ReferencedContainer = "container:DavinciCN.xcodeproj">
+               BuildableName = "CommonTools.app"
+               BlueprintName = "CommonTools"
+               ReferencedContainer = "container:CommonTools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45D1F78D26FD76A000A98404"
-               BuildableName = "DavinciCNTests.xctest"
-               BlueprintName = "DavinciCNTests"
-               ReferencedContainer = "container:DavinciCN.xcodeproj">
+               BuildableName = "CommonToolsTests.xctest"
+               BlueprintName = "CommonToolsTests"
+               ReferencedContainer = "container:CommonTools.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45D1F79826FD76A000A98404"
-               BuildableName = "DavinciCNUITests.xctest"
-               BlueprintName = "DavinciCNUITests"
-               ReferencedContainer = "container:DavinciCN.xcodeproj">
+               BuildableName = "CommonToolsUITests.xctest"
+               BlueprintName = "CommonToolsUITests"
+               ReferencedContainer = "container:CommonTools.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45D1F77426FD769E00A98404"
-            BuildableName = "DavinciCN.app"
-            BlueprintName = "DavinciCN"
-            ReferencedContainer = "container:DavinciCN.xcodeproj">
+            BuildableName = "CommonTools.app"
+            BlueprintName = "CommonTools"
+            ReferencedContainer = "container:CommonTools.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -89,9 +89,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45D1F77426FD769E00A98404"
-            BuildableName = "DavinciCN.app"
-            BlueprintName = "DavinciCN"
-            ReferencedContainer = "container:DavinciCN.xcodeproj">
+            BuildableName = "CommonTools.app"
+            BlueprintName = "CommonTools"
+            ReferencedContainer = "container:CommonTools.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

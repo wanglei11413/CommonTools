@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DavinciCN
+//  CommonTools
 //
 //  Created by Mac on 2021/9/24.
 //
