@@ -93,11 +93,6 @@ extension Network {
                 requestHeaders.add(name: "Content-Type", value: "application/json;charset=utf-8")
                 requestHeaders.add(name: "Accept", value: "application/json")
                 requestHeaders.add(name: "x-source-app-id", value: "cn-ios")
-                // 如果登录了
-                if isLogin() {
-                    let auth = GetUserInfo().tokenType + " " + GetUserInfo().accessToken
-                    requestHeaders.add(name: "Authorization", value: auth)
-                }
             }
             //发起网络请求
             AF.sessionConfiguration.timeoutIntervalForRequest = 60
@@ -205,11 +200,6 @@ extension Network {
             requestHeaders.add(name: "Content-Type", value: "application/json;charset=utf-8")
             requestHeaders.add(name: "Accept", value: "application/json")
             requestHeaders.add(name: "x-source-app-id", value: "cn-ios")
-            // 如果登录了
-            if isLogin() {
-                let auth = GetUserInfo().tokenType + " " + GetUserInfo().accessToken
-                requestHeaders.add(name: "Authorization", value: auth)
-            }
         }
         AF.sessionConfiguration.timeoutIntervalForRequest = 60
         AF.request(baseUrl,
