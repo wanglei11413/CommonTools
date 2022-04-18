@@ -1,6 +1,6 @@
 //
 //  CommonTools.swift
-//  CommonTools
+//  DavinciCN
 //  常用工具
 //  Created by Mac on 2021/9/24.
 //
@@ -18,6 +18,18 @@ func RGBColor(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> UIColor {
 /// 设置RGB颜色带透明度
 func RGBColorA(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UIColor {
     return UIColor.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
+}
+
+// MARK: - 获取设备型号
+func GetDeviceName() -> String {
+    var systemInfo = utsname()
+    uname(&systemInfo)
+    let machineMirror = Mirror(reflecting: systemInfo.machine)
+    let identifier = machineMirror.children.reduce("") { identifier, element in
+        guard let value = element.value as? Int8, value != 0 else { return identifier }
+        return identifier + String(UnicodeScalar(UInt8(value)))
+    }
+    return identifier
 }
 
 // MARK: - 设置十六进制颜色（样式：0xff00ff ）
@@ -40,9 +52,14 @@ func BoldFont(_ float: Float) -> UIFont {
     return UIFont.boldSystemFont(ofSize: RW(CGFloat(float)))
 }
 
+func ImpactFont(_ float: Float) -> UIFont {
+    return UIFont(name: "Impact", size: RW(CGFloat(float))) ?? BoldFont(float)
+}
+
 // MARK: - 适配宽度
 func RW(_ value: CGFloat) -> CGFloat {
-    return (value) / 375.0 * UIScreen.main.bounds.size.width
+    let width = UIScreen.main.bounds.size.width > 600 ? 375 : UIScreen.main.bounds.size.width
+    return (value) / 375.0 * width
 }
 
 // MARK: - 适配高度
@@ -52,7 +69,14 @@ func RH(_ value: CGFloat) -> CGFloat {
 
 // MARK: - 根据名称设置图片
 func imageName(_ imageString:String)->UIImage{
-    return UIImage(named: imageString)!
+
+    if imageString.isEmpty {
+        return UIImage()
+    }
+    if let image = UIImage(named: imageString) {
+        return image
+    }
+    return UIImage()
 }
 
 
@@ -93,12 +117,12 @@ public func DLog<T>(_ message : T, file : String = #file, funcName : String = #f
 // MARK: - 获取当前时间戳
 /// 获取当前时间戳
 /// - Returns: 时间戳
-public func dateCurrentStamp() -> String {
+public func dateCurrentStamp() -> Int {
     
     let date       = Date(timeIntervalSinceNow: 0)
     let interval   = date.timeIntervalSince1970
-    let timeString = String(format: "%0.f", interval)
-    return timeString
+//    let timeString = String(format: "%0.f", interval)
+    return Int(interval)
 }
 
 // MARK: - 根据时间戳、格式获取时间
@@ -184,20 +208,20 @@ public func dateStyleDesc(_ dateStr: String) -> String {
                 if components.minute == 0 {
                     return "刚刚"
                 } else {
-                    return "\(String(describing: components.hour))分钟前"
+                    return "\(components.minute!)分钟前"
                 }
             } else {
-                return "\(String(describing: components.hour))小时前"
+                return "\(components.hour!)小时前"
             }
         } else if calendar.isDateInYesterday(targetDate) {
             return "昨天"
         } else {
-            returnFormatter.dateFormat = "MM.dd"
+            returnFormatter.dateFormat = "MM月dd日"
             return returnFormatter.string(from: targetDate)
         }
     } else {
         // 直接返回年月日
-        returnFormatter.dateFormat = "yyyy.MM.dd";
+        returnFormatter.dateFormat = "yyyy年MM月dd日";
         return returnFormatter.string(from: targetDate)
     }
 }
@@ -346,6 +370,19 @@ func imageFromColor(_ color: UIColor,
    return image!
 }
 
+// MARK: - 将ImageView上的控件合成image
+/// 将ImageView上的控件合成image
+/// - Parameter imageView: imageView
+/// - Returns: 图片
+func imageWithImageView(_ imageView: UIImageView) -> UIImage {
+    
+    UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, imageView.isOpaque, UIScreen.main.scale)
+    imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+    let img = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return img ?? UIImage()
+}
+
 // MARK: 存储数据到UserDefaults
 let UserDefault = UserDefaults.standard;
 ///存本地
@@ -390,8 +427,8 @@ private func getIsFullScreen() -> Bool {
 }
 
 // MARK: - 屏幕底部安全距离
-let KSafeBottomMargin = getTabbarSafeBottomMargin()
-let KTabBarHeight     = 49 +  KSafeBottomMargin
+let kSafeBottomMargin = getTabbarSafeBottomMargin()
+let kTabBarHeight     = 49 +  kSafeBottomMargin
 /// 获取屏幕底部安全距离
 /// - Returns: 边距值
 private func getTabbarSafeBottomMargin() -> CGFloat {
@@ -503,6 +540,9 @@ public func validateIDCardNumber(_ idCardNumber: String) -> Bool {
 /// - Parameter email: 邮箱
 /// - Returns: 结果
 public func validateEmail(_ email: String) -> Bool {
+    if email.isEmpty {
+        return false
+    }
     do {
         let regex = try NSRegularExpression(pattern: "^[A-Za-z0-9._%+-]+@[A-Za-z0-9._%+-]+\\.[A-Za-z0-9._%+-]+$", options: .caseInsensitive)
         let numberOfMatches = regex.numberOfMatches(in: email, options: .reportProgress, range: NSRange(location: 0, length: email.count))
@@ -517,7 +557,13 @@ public func validateEmail(_ email: String) -> Bool {
 }
 
 // MARK: - 是否为数字以及字母合集
+/// 是否为数字以及字母合集
+/// - Parameter targetStr: str
+/// - Returns: 结果
 public func validateIsNumberLetter(_ targetStr: String) -> Bool {
+    if targetStr == "" {
+        return true
+    }
     let numberRegex = NSPredicate(format: "SELF MATCHES %@",  "^.*[0-9]+.*$")
     let letterRegex = NSPredicate(format:"SELF MATCHES %@","^.*[A-Za-z]+.*$")
     if numberRegex.evaluate(with: targetStr) && letterRegex.evaluate(with: targetStr) {
@@ -528,14 +574,29 @@ public func validateIsNumberLetter(_ targetStr: String) -> Bool {
 }
 
 // MARK: - 是否为数字合集
+/// 是否为数字合集
+/// - Parameter targetStr: str
+/// - Returns: 结果
 public func validateIsNumber(_ targetStr: String) -> Bool {
+    if targetStr == "" {
+        return true
+    }
+    if targetStr.isEmpty {
+        return false
+    }
     let scan: Scanner = Scanner(string: targetStr)
     var val:Int = 0
     return scan.scanInt(&val) && scan.isAtEnd
 }
 
 // MARK: - 是否为字母合集
+/// 是否为字母合集
+/// - Parameter targetStr: str
+/// - Returns: 结果
 public func validateIsLetter(_ targetStr: String) -> Bool {
+    if targetStr == "" {
+        return true
+    }
     let letterRegex = NSPredicate(format:"SELF MATCHES %@", "^[A-Za-z]*$")
     if letterRegex.evaluate(with: targetStr) {
         return true
@@ -545,16 +606,34 @@ public func validateIsLetter(_ targetStr: String) -> Bool {
 }
 
 // MARK: - 是否为符号合集
+/// 是否为符号合集
+/// - Parameter targetStr: str
+/// - Returns: 结果
 public func validateIsSymbol(_ targetStr: String) -> Bool {
-    let symbolRegex = NSPredicate(format:"SELF MATCHES %@", "^[^A-Za-z0-9]*$")
-    if symbolRegex.evaluate(with: targetStr) {
+    if targetStr == "" {
+        return true
+    }
+    
+    let aa = NSCharacterSet(charactersIn: "~!@#$%^*()_+{}:\"?`[];'./,-=").inverted
+    let foundRange = (targetStr as NSString).rangeOfCharacter(from: aa)
+    if foundRange.location == NSNotFound {
         return true
     } else {
         return false
     }
+    
+//    let symbolRegex = NSPredicate(format:"SELF MATCHES %@", "^[^A-Za-z0-9]*$")
+//    if symbolRegex.evaluate(with: targetStr) {
+//        return true
+//    } else {
+//        return false
+//    }
 }
 
 // MARK: - 是否含有中文
+/// 是否含有中文
+/// - Parameter targetStr: str
+/// - Returns: 结果
 public func validateExistChinese(_ targetStr: String) -> Bool {
     for (_, value) in targetStr.enumerated() {
         if ("\u{4E00}" <= value  && value <= "\u{9FA5}") {
@@ -565,11 +644,14 @@ public func validateExistChinese(_ targetStr: String) -> Bool {
 }
 
 // MARK: - 校验手机号码格式
+/// 校验手机号码格式
+/// - Parameter phoneNumber: 手机号码
+/// - Returns: 结果
 public func validatePhoneNumber(_ phoneNumber: String) -> Bool {
     if phoneNumber.count != 11 {
         return false
     }
-    let regextestall = NSPredicate(format: "SELF MATCHES %@", "^1[0-9]{10}")
+    let regextestall = NSPredicate(format: "SELF MATCHES %@", "^1[3-9]\\d{9}$")
     if regextestall.evaluate(with: phoneNumber) {
         return true
     } else {
@@ -579,13 +661,13 @@ public func validatePhoneNumber(_ phoneNumber: String) -> Bool {
 
 // MARK: - 检测相册权限
 public func checkPhotoLibraryAuthorizationStatus() -> Bool {
-    if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+    if !UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
         HUDTool.showText("该设备不支持相册")
         DLog("该设备不支持相册")
         return false
     }
     let status = PHPhotoLibrary.authorizationStatus()
-    if status == .restricted || status == .denied || status == .notDetermined {
+    if status == .restricted || status == .denied {
         showSettingAlertStr(tipStr: "请在iPhone的\"设置-隐私-照片\"选项中允许访问你的手机相册")
         return false
     } else {
@@ -595,13 +677,13 @@ public func checkPhotoLibraryAuthorizationStatus() -> Bool {
 
 // MARK: - 检测相机权限
 public func checkCameraAuthorizationStatus() -> Bool {
-    if UIImagePickerController.isSourceTypeAvailable(.camera) {
+    if !UIImagePickerController.isSourceTypeAvailable(.camera) {
         HUDTool.showText("该设备不支持拍照")
         DLog("该设备不支持拍照")
         return false
     }
     let status = AVCaptureDevice.authorizationStatus(for: .video)
-    if status == .restricted || status == .denied || status == .notDetermined {
+    if status == .restricted || status == .denied {
         showSettingAlertStr(tipStr: "请在iPhone的\"设置-隐私-相机\"中允许访问你的相机")
         return false
     } else {
@@ -768,41 +850,9 @@ public func animateRotation(_ fromValue: CGFloat,
 public func stringToPrice(_ targetString: String) -> String {
     let numberFormatter            = NumberFormatter()
     numberFormatter.positiveFormat = "###,##0.00;"
-    let priceStr                   = numberFormatter.string(from: NSNumber(value: Int(targetString) ?? 0))
+    let priceStr                   = numberFormatter.string(from: NSNumber(value: Double(targetString) ?? 0))
     return priceStr ?? "0"
 }
-
-// MARK: - 历史记录相关
-/// 存储历史记录
-/// - Parameters:
-///   - arr: 要存储的数据
-///   - fileName: 文件夹名字，需要带.plist
-public func DMSaveHistorydata(arr: [[String: Any]], fileName: String) {
-    
-    let path     = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first
-    if let filePath = (path?.appending("/\(fileName)")) {
-        let dataArr: NSArray = arr as NSArray
-        dataArr.write(toFile: filePath, atomically: true)
-//        DLog(NSArray.init(contentsOfFile: filePath))
-    }
-}
-
-/// 得到存储的历史记录
-/// - Parameter fileName: 文件夹名字，需要带.plist
-public func DMGetHistoryData(fileName: String) -> [Any] {
-    
-    let path     = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first
-    if let filePath = (path?.appending("/\(fileName)")) {
-        if let arr = NSArray.init(contentsOfFile: filePath) {
-            return arr as! [[String: Any]]
-        } else {
-            return []
-        }
-    } else {
-        return []
-    }
-}
-
 
 // MARK: 权限相关
 
@@ -813,23 +863,49 @@ func isRightCamera() -> Bool {
     return authStatus != .restricted && authStatus != .denied
 }
 
+/// 去除emoji表情
+/// - Parameter text: 文字
+func DisableEmoji(text: String) -> String {
+    let regex = try! NSRegularExpression(pattern: "[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]", options: .caseInsensitive)
+    let str = regex.stringByReplacingMatches(in: text, options: .reportProgress, range: NSRange(location: 0, length: text.count), withTemplate: "")
+    return str
+}
+
+/// 拨打电话方法
+/// - Parameter phone: 电话号码
+func CallPhone(phone: String ) {
+    var tele     = phone.replacingOccurrences(of: "+", with: "")
+    tele         = tele.replacingOccurrences(of: " ", with: "")
+    let callPhone = "telprompt://" + tele
+    if let url = URL(string: callPhone) {
+        UIApplication.shared.open(url, options: [:]) { success in
+            if !success {
+                HUDTool.showText("拨打电话失败，请重试")
+            }
+        }
+    } else {
+        HUDTool.showText("拨打电话失败，请重试")
+    }
+}
+
 // MARK: - 私有方法
 /// 提示框
 /// - Parameter tipStr: 文字
 private func showSettingAlertStr(tipStr: String) {
-    let alert = WLAlertView().alertView(withIsLand: false, image: nil, title: "提示", message: tipStr, cancelButtonTitle: "取消", otherButtonTitles: ["前往设置"]) { index, _ in
-        if index == 1 {
-            let app = UIApplication.shared
-            if let url = URL.init(string: UIApplication.openSettingsURLString) {
-                if app.canOpenURL(url) {
-                    app.open(url, options: [:]) { _ in
-                        
-                    }
-                }
-            }
-        }
-    }
-    alert?.setButtionTitleColor?(TextColor_DarkGray, index: 0)
-    alert?.show?()
+    
+//    let alert = WLAlertView().alertView(withIsLand: false, image: nil, title: "提示", message: tipStr, cancelButtonTitle: "取消", otherButtonTitles: ["前往设置"]) { index, _ in
+//        if index == 1 {
+//            let app = UIApplication.shared
+//            if let url = URL.init(string: UIApplication.openSettingsURLString) {
+//                if app.canOpenURL(url) {
+//                    app.open(url, options: [:]) { _ in
+//                        
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    alert?.setButtionTitleColor?(TextColor_DarkGray, index: 0)
+//    alert?.show?()
 }
 
