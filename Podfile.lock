@@ -1,140 +1,60 @@
 PODS:
-  - Alamofire (5.4.3)
-  - FLAnimatedImage (1.0.16)
-  - GKCover (3.0.0)
+  - Alamofire (5.6.4)
+  - GKCover (3.0.1)
   - HandyJSON (5.0.2)
-  - IQKeyboardManagerSwift (6.5.6)
-  - Masonry (1.1.0)
+  - IQKeyboardManagerSwift (6.5.11)
   - MBProgressHUD (1.2.0)
-  - MJRefresh (3.7.2)
-  - SDWebImage (5.11.1):
-    - SDWebImage/Core (= 5.11.1)
-  - SDWebImage/Core (5.11.1)
-  - SJBaseVideoPlayer (3.6.3):
-    - Masonry
-    - SJBaseVideoPlayer/AVPlayer (= 3.6.3)
-    - SJBaseVideoPlayer/Common (= 3.6.3)
-    - SJUIKit/AttributesFactory (>= 0.0.0.38)
-    - SJUIKit/ObserverHelper
-    - SJUIKit/Queues
-    - SJUIKit/SQLite3
-  - SJBaseVideoPlayer/AVPlayer (3.6.3):
-    - Masonry
-    - SJBaseVideoPlayer/Common
-    - SJUIKit/AttributesFactory (>= 0.0.0.38)
-    - SJUIKit/ObserverHelper
-    - SJUIKit/Queues
-    - SJUIKit/SQLite3
-  - SJBaseVideoPlayer/Common (3.6.3):
-    - Masonry
-    - SJBaseVideoPlayer/ResourceLoader
-    - SJUIKit/AttributesFactory (>= 0.0.0.38)
-    - SJUIKit/ObserverHelper
-    - SJUIKit/Queues
-    - SJUIKit/SQLite3
-  - SJBaseVideoPlayer/ResourceLoader (3.6.3):
-    - Masonry
-    - SJUIKit/AttributesFactory (>= 0.0.0.38)
-    - SJUIKit/ObserverHelper
-    - SJUIKit/Queues
-    - SJUIKit/SQLite3
-  - SJUIKit/AttributesFactory (0.0.0.58):
-    - SJUIKit/AttributesFactory/Deprecated (= 0.0.0.58)
-    - SJUIKit/AttributesFactory/UIKitText (= 0.0.0.58)
-  - SJUIKit/AttributesFactory/Deprecated (0.0.0.58)
-  - SJUIKit/AttributesFactory/UIKitText (0.0.0.58)
-  - SJUIKit/ObserverHelper (0.0.0.58)
-  - SJUIKit/Queues (0.0.0.58)
-  - SJUIKit/SQLite3 (0.0.0.58):
-    - SJUIKit/SQLite3/Core (= 0.0.0.58)
-    - SJUIKit/SQLite3/Protocol (= 0.0.0.58)
-    - YYModel
-  - SJUIKit/SQLite3/Core (0.0.0.58):
-    - SJUIKit/SQLite3/Protocol
-    - YYModel
-  - SJUIKit/SQLite3/Protocol (0.0.0.58):
-    - YYModel
-  - SJVideoPlayer (3.3.2):
-    - SJBaseVideoPlayer (>= 3.6.0)
-    - SJVideoPlayer/Common (= 3.3.2)
-    - SJVideoPlayer/ControlLayers (= 3.3.2)
-    - SJVideoPlayer/ResourceLoader (= 3.3.2)
-  - SJVideoPlayer/Common (3.3.2):
-    - Masonry
-    - SJBaseVideoPlayer (>= 3.6.0)
-    - SJUIKit/AttributesFactory
-    - SJVideoPlayer/ResourceLoader
-  - SJVideoPlayer/ControlLayers (3.3.2):
-    - SJBaseVideoPlayer (>= 3.6.0)
-    - SJVideoPlayer/Common
-  - SJVideoPlayer/ResourceLoader (3.3.2):
-    - SJBaseVideoPlayer (>= 3.6.0)
+  - MJRefresh (3.7.5)
+  - SDWebImage (5.15.6):
+    - SDWebImage/Core (= 5.15.6)
+  - SDWebImage/Core (5.15.6)
   - SKArchCutter (0.0.6)
-  - SnapKit (5.0.1)
+  - SnapKit (5.6.0)
   - VTMagic (1.2.4):
     - VTMagic/Core (= 1.2.4)
   - VTMagic/Core (1.2.4)
-  - XHLaunchAd (3.9.12):
-    - FLAnimatedImage (~> 1.0.12)
-  - YYModel (1.0.4)
   - YYText (1.0.7)
 
 DEPENDENCIES:
-  - Alamofire
-  - GKCover
-  - HandyJSON
-  - IQKeyboardManagerSwift
-  - MBProgressHUD
-  - MJRefresh
-  - SDWebImage
-  - SJVideoPlayer
+  - Alamofire (~> 5.6.4)
+  - GKCover (~> 3.0.1)
+  - HandyJSON (~> 5.0.2)
+  - IQKeyboardManagerSwift (~> 6.5.11)
+  - MBProgressHUD (~> 1.2.0)
+  - MJRefresh (~> 3.7.5)
+  - SDWebImage (~> 5.15.6)
   - SKArchCutter
-  - SnapKit
-  - VTMagic
-  - XHLaunchAd
-  - YYText
+  - SnapKit (~> 5.6.0)
+  - VTMagic (~> 1.2.4)
+  - YYText (~> 1.0.7)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - FLAnimatedImage
     - GKCover
     - HandyJSON
     - IQKeyboardManagerSwift
-    - Masonry
     - MBProgressHUD
     - MJRefresh
     - SDWebImage
-    - SJBaseVideoPlayer
-    - SJUIKit
-    - SJVideoPlayer
     - SKArchCutter
     - SnapKit
     - VTMagic
-    - XHLaunchAd
-    - YYModel
     - YYText
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
-  GKCover: babf404248716c2760c5b4b24cd2a2792935a0ce
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  GKCover: 6486cf87c0a5cae4bb5c3a09e17925ad8b466412
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
-  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
-  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
-  SJBaseVideoPlayer: 99957bb0d0fe1ccb8d6710bd9db9f52640c56a32
-  SJUIKit: 86d5b16f8b8b17274ef8805acf965e4014629e15
-  SJVideoPlayer: 3a271ff92c7b9d611c537655fd1edcbae18b8587
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  SDWebImage: d47d81bea8a77187896b620dc79c3c528e8906b9
   SKArchCutter: 0d83731d663e363ef81f308376583811c2b00f65
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
-  XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 281bad64bfb9c99c555929a9e515865b0b742a65
+PODFILE CHECKSUM: a61e9289f2664f839ddf4529540be66660167754
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3
