@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0431694B2A0356F300820033 /* SafetyProtection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431694A2A0356F300820033 /* SafetyProtection.m */; };
 		34E82E47B6420B598112372C /* Pods_CommonTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4244D8C90F61B47DE78997D /* Pods_CommonTools.framework */; };
 		4514468A27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */; };
 		4514468B27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */; };
@@ -70,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043169492A0356F300820033 /* SafetyProtection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafetyProtection.h; sourceTree = "<group>"; };
+		0431694A2A0356F300820033 /* SafetyProtection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafetyProtection.m; sourceTree = "<group>"; };
 		3A2A6824873DC2542E818B6F /* Pods-CommonTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTools.release.xcconfig"; path = "Target Support Files/Pods-CommonTools/Pods-CommonTools.release.xcconfig"; sourceTree = "<group>"; };
 		4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BuriedPoint.m"; sourceTree = "<group>"; };
 		4514468927001C1700FB0FB6 /* UIButton+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BuriedPoint.h"; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 		4514468C27001C2300FB0FB6 /* OCTools */ = {
 			isa = PBXGroup;
 			children = (
+				043169492A0356F300820033 /* SafetyProtection.h */,
+				0431694A2A0356F300820033 /* SafetyProtection.m */,
 				45D1F7E826FDAA0500A98404 /* UIColor+extension.h */,
 				45D1F7E926FDAA0500A98404 /* UIColor+extension.m */,
 				4514468927001C1700FB0FB6 /* UIButton+BuriedPoint.h */,
@@ -521,6 +526,7 @@
 				45D1F7DA26FD834200A98404 /* AppSettings.swift in Sources */,
 				45D1F7CC26FD815300A98404 /* KeychainItemWrapper.m in Sources */,
 				455138BC280D5B4F000F2D37 /* ConstraintArrayDSL.swift in Sources */,
+				0431694B2A0356F300820033 /* SafetyProtection.m in Sources */,
 				45D1F77926FD769E00A98404 /* AppDelegate.swift in Sources */,
 				451446FA27043CB900FB0FB6 /* BaseModel.swift in Sources */,
 				45D1F7C726FD810200A98404 /* WLAlertView.m in Sources */,
@@ -714,9 +720,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CommonTools/CommonTools.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4643Q3U79P;
 				INFOPLIST_FILE = CommonTools/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -741,9 +748,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CommonTools/CommonTools.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4643Q3U79P;
 				INFOPLIST_FILE = CommonTools/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

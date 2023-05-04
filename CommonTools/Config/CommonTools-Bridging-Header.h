@@ -11,10 +11,11 @@
 /******************* OC的类文件***********/
 
 #import "RTRootNavigationController.h"
-#import <XHLaunchAd.h>
+//#import <XHLaunchAd.h>
 #import <GKCover.h>
 #import "WLAlertView.h"
 #import "SKArchCutter.h"
 #import <MJRefresh/MJRefresh.h>
 #import <SDWebImage/SDWebImage.h>
+#import "SafetyProtection.h"
 

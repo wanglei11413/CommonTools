@@ -41,9 +41,12 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
 
         makeUI()
+        
+        SafetyProtection.checkSignatureMsg()
     }
     
     // MARK: - privates methods
+    
     private func makeUI() {
         self.navigationItem.title = "圆弧Slider"
         
@@ -61,6 +64,7 @@ class HomeViewController: BaseViewController {
         slider.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        
     }
 
 }
