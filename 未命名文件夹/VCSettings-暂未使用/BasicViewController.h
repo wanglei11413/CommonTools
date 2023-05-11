@@ -1,12 +1,5 @@
-//
-//  BasicViewController.h
-//  qianQianJiaDao
-//
-//  Created by Monster on 2017/12/29.
-//  Copyright © 2017年 huiYanKeJi. All rights reserved.
-//
+// 所有viewController均继承该viewController
 
-//所有viewController均继承该viewController
 #import <UIKit/UIKit.h>
 #import "UIViewController+RTRootNavigationController.h"
 
@@ -25,9 +18,9 @@
 @property (nonatomic, assign) BOOL navUnTranslucent;
 
 /**
- 隐藏底部细线
+ 显示底部细线
  */
-@property (nonatomic, assign) BOOL navShadowImageHidden;
+@property (nonatomic, assign) BOOL navShadowImage;
 
 /**
  导航栏背景颜色
