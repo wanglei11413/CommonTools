@@ -42,6 +42,7 @@ class HomeViewController: BaseViewController {
 
         makeUI()
         
+        KNaviHeight
         SafetyProtection.checkSignatureMsg()
     }
     

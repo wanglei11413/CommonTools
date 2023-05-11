@@ -18,4 +18,5 @@
 #import <MJRefresh/MJRefresh.h>
 #import <SDWebImage/SDWebImage.h>
 #import "SafetyProtection.h"
+#import "Tools.h"
 
