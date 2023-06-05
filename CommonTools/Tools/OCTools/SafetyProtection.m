@@ -6,6 +6,7 @@
 //
 
 #import "SafetyProtection.h"
+#import <UIKit/UIKit.h>
 
 /// 签名文件哈希值--可以从上一次打包时获取
 #define PROVISION_HASH @"w2vnN9zRdwo0Z0Q4amDuwM2DKhc="
@@ -60,7 +61,7 @@ static NSDictionary * rootDic=nil;
  }
  */
 
-+ (BOOL)getProxyStatus
++ (BOOL)getisUseProxy
 {
 #ifdef DEBUG
     return NO;
@@ -81,7 +82,7 @@ static NSDictionary * rootDic=nil;
 #endif
 }
 
-+ (void)checkSignatureMsg
++ (void)getIsUseSignature
 {
     NSString *newPath=[[NSBundle mainBundle] resourcePath];
 
@@ -98,6 +99,34 @@ static NSDictionary * rootDic=nil;
         ![PROVISION_HASH isEqualToString:hashStr]) {
         abort();//退出应用
     }
+}
+
++ (BOOL)getIsJailBreak
+{
+    // 如果可以打开cydia，代表越狱了
+    if ([UIApplication.sharedApplication canOpenURL:[NSURL URLWithString:@"cydia://"]]) {
+        return YES;
+    }
+    // 如果可以打开常用的越狱文件，代表越狱了
+    NSArray *pathArr = @[@"/Applications/Cydia.app",
+                         @"/usr/sbin/sshd",
+                         @"/etc/apt"];
+    for (int i = 0 ; i < pathArr.count ; i ++) {
+        NSString *path = pathArr[i];
+        if ([NSFileManager.defaultManager fileExistsAtPath:path]) {
+            return YES;
+        }
+    }
+    // 是否有完全访问权限，有就代表越狱了
+    NSString *appPath = @"/Applications/";
+    if ([NSFileManager.defaultManager fileExistsAtPath:appPath]) {
+        NSArray *appList = [NSFileManager.defaultManager contentsOfDirectoryAtPath:appPath error:nil];
+        if (appList.count > 0) {
+            return YES;
+        }
+    }
+    // 未越狱
+    return NO;
 }
 
 @end
