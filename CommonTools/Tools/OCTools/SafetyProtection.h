@@ -14,11 +14,26 @@ NS_ASSUME_NONNULL_BEGIN
 /// 检测是否使用了代理
 + (BOOL)getisUseProxy;
 
-/// 检测是否二次打包，如果是，直接退出app
-+ (void)getIsUseSignature;
+/// 检测Mach-O文件是否被篡改
++ (BOOL)getIsMachO;
+
+/// 检测签名文件是否被篡改
++ (BOOL)getIsSignature;
 
 /// 检测是否越狱
 + (BOOL)getIsJailBreak;
+
+/// 关闭ptrace调试，阻止调试器依附
++ (void)disable_gdb;
+
+/// 检测sysctl状态
++ (BOOL)getIsSysctl;
+
+/// 捕捉SIGSTOP信号
++ (BOOL)getIsSIGSTOP;
+
+/// 检测内联svc+syscall+pteace----暂时不知道是否有效
+//+ (void)AntiDebugASM;
 
 @end
 

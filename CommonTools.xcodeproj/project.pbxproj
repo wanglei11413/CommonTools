@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0431694B2A0356F300820033 /* SafetyProtection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0431694A2A0356F300820033 /* SafetyProtection.m */; };
 		048BE3E92A0C786E00DB2B4F /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 048BE3E72A0C786E00DB2B4F /* Tools.m */; };
+		04B0482A2A2DCA1A00F7A12C /* SafetyProtection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B048282A2DCA1A00F7A12C /* SafetyProtection.m */; };
 		34E82E47B6420B598112372C /* Pods_CommonTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4244D8C90F61B47DE78997D /* Pods_CommonTools.framework */; };
 		4514468A27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */; };
 		4514468B27001C1700FB0FB6 /* UIButton+BuriedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */; };
@@ -72,10 +72,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		043169492A0356F300820033 /* SafetyProtection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafetyProtection.h; sourceTree = "<group>"; };
-		0431694A2A0356F300820033 /* SafetyProtection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafetyProtection.m; sourceTree = "<group>"; };
 		048BE3E72A0C786E00DB2B4F /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		048BE3E82A0C786E00DB2B4F /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		04B048282A2DCA1A00F7A12C /* SafetyProtection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyProtection.m; sourceTree = "<group>"; };
+		04B048292A2DCA1A00F7A12C /* SafetyProtection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafetyProtection.h; sourceTree = "<group>"; };
 		3A2A6824873DC2542E818B6F /* Pods-CommonTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTools.release.xcconfig"; path = "Target Support Files/Pods-CommonTools/Pods-CommonTools.release.xcconfig"; sourceTree = "<group>"; };
 		4514468827001C1700FB0FB6 /* UIButton+BuriedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BuriedPoint.m"; sourceTree = "<group>"; };
 		4514468927001C1700FB0FB6 /* UIButton+BuriedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BuriedPoint.h"; sourceTree = "<group>"; };
@@ -163,8 +163,8 @@
 			children = (
 				048BE3E82A0C786E00DB2B4F /* Tools.h */,
 				048BE3E72A0C786E00DB2B4F /* Tools.m */,
-				043169492A0356F300820033 /* SafetyProtection.h */,
-				0431694A2A0356F300820033 /* SafetyProtection.m */,
+				04B048292A2DCA1A00F7A12C /* SafetyProtection.h */,
+				04B048282A2DCA1A00F7A12C /* SafetyProtection.m */,
 				45D1F7E826FDAA0500A98404 /* UIColor+extension.h */,
 				45D1F7E926FDAA0500A98404 /* UIColor+extension.m */,
 				4514468927001C1700FB0FB6 /* UIButton+BuriedPoint.h */,
@@ -532,7 +532,7 @@
 				45D1F7DA26FD834200A98404 /* AppSettings.swift in Sources */,
 				45D1F7CC26FD815300A98404 /* KeychainItemWrapper.m in Sources */,
 				455138BC280D5B4F000F2D37 /* ConstraintArrayDSL.swift in Sources */,
-				0431694B2A0356F300820033 /* SafetyProtection.m in Sources */,
+				04B0482A2A2DCA1A00F7A12C /* SafetyProtection.m in Sources */,
 				45D1F77926FD769E00A98404 /* AppDelegate.swift in Sources */,
 				451446FA27043CB900FB0FB6 /* BaseModel.swift in Sources */,
 				45D1F7C726FD810200A98404 /* WLAlertView.m in Sources */,
