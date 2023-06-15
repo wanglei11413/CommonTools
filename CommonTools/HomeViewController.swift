@@ -41,9 +41,6 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
 
         makeUI()
-        
-        KNaviHeight
-        SafetyProtection.checkSignatureMsg()
     }
     
     // MARK: - privates methods
@@ -65,7 +62,6 @@ class HomeViewController: BaseViewController {
         slider.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
     }
 
 }
