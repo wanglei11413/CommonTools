@@ -14,7 +14,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/sysctl.h>
-
 #import <dlfcn.h>
 #import <sys/types.h>
 
@@ -47,36 +46,6 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
  }
  */
 
-/**
- /// 阻止动态调试 在main.m中设置
- #import <dlfcn.h>
- #import <sys/types.h>
-
- typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
- #if !defined(PT_DENY_ATTACH)
- #define PT_DENY_ATTACH 31
- #endif  // !defined(PT_DENY_ATTACH)
-
- void disable_gdb() {
-     void* handle = dlopen(0, RTLD_GLOBAL | RTLD_NOW);
-     ptrace_ptr_t ptrace_ptr = dlsym(handle, "ptrace");
-     ptrace_ptr(PT_DENY_ATTACH, 0, 0, 0);
-     dlclose(handle);
- }
-
- int main(int argc, char *argv[]) {
-     // Don't interfere with Xcode debugging sessions.
-     #if !(DEBUG)
-         disable_gdb();
-     #endif
-
-     @autoreleasepool {
-         return UIApplicationMain(argc, argv, nil,
-             NSStringFromClass([MyAppDelegate class]));
-     }
- }
- */
-
 + (BOOL)getisUseProxy
 {
 #ifdef DEBUG
@@ -84,7 +53,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
 #else
     NSDictionary *proxySettings = (__bridge NSDictionary *)(CFNetworkCopySystemProxySettings());
     
-    NSArray *proxies = (__bridge NSArray *)(CFNetworkCopyProxiesForURL((__bridge CFURLRef _Nonnull)([NSURL URLWithString:@"http://www.baidu.com"]), (__bridge CFDictionaryRef _Nonnull)(proxySettings)));
+    NSArray *proxies = (__bridge NSArray *)(CFNetworkCopyProxiesForURL((__bridge CFURLRef _Nonnull)([NSURL URLWithString:@"https://www.baidu.com"]), (__bridge CFDictionaryRef _Nonnull)(proxySettings)));
     
     NSDictionary *settings = proxies[0];
     
@@ -126,18 +95,16 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
 
     NSDictionary *fileDic = [rootDic objectForKey:@"files2"];
     
-    if ([fileDic objectForKey:@"embedded.mobileprovision"] == nil) {
-        DLog(@"签名文件被篡改，进行了二次打包")
-        return YES;
-    }
-
-    NSDictionary *infoDic = [fileDic objectForKey:@"embedded.mobileprovision"];
-    NSData *tempData = [infoDic objectForKey:@"hash"];
-    NSString *hashStr = [tempData base64EncodedStringWithOptions:0];
-    if (hashStr != nil &&
-        ![PROVISION_HASH isEqualToString:hashStr]) {
-        DLog(@"签名文件被篡改，进行了二次打包")
-        return YES;
+    if ([fileDic objectForKey:@"embedded.mobileprovision"] != nil) {
+        //
+        NSDictionary *infoDic = [fileDic objectForKey:@"embedded.mobileprovision"];
+        NSData *tempData = [infoDic objectForKey:@"hash"];
+        NSString *hashStr = [tempData base64EncodedStringWithOptions:0];
+        if (hashStr != nil &&
+            ![PROVISION_HASH isEqualToString:hashStr]) {
+            DLog(@"签名文件被篡改，进行了二次打包")
+            return YES;
+        }
     }
     return NO;
 }
@@ -259,9 +226,6 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
     });
     dispatch_resume(source);
     
-//    if (isatty(1)) {
-//        result = YES;
-//    }
     if (result) {
         DLog(@"捕捉到了SIGSTOP信号")
     }
@@ -269,25 +233,73 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
 }
 
 + (void)AntiDebugASM
-//static __attribute__((always_inline)) void AntiDebugASM()
+{
+    anti_debug();
+    check_svc_integrity();
+    // 如果为1，那么代表处于调试状态
+    if (isatty(1)) {
+        abort();
+    }
+}
+
+#pragma mark - 反调试检测 -
+/// 使用inline方式将函数在调用处强制展开，防止被hook和追踪符号
+static __attribute__((always_inline)) void anti_debug()
 {
 #ifdef __arm__
-    asm volatile("mov r0,#31\n"
-                 "mov r1,#0\n"
-                 "mov r2,#0\n"
-                 "mov r12,#26\n"
-                 "svc #80\n"
-                 );
+    __asm__ __volatile__
+    (
+     "mov r0,#31\n"
+     "mov r1,#0\n"
+     "mov r2,#0\n"
+     "mov r12,#26\n"
+     "svc #80\n"
+     );
 #endif
-
+    // 判断是否是ARM64处理器指令集
 #ifdef __arm64__
-    asm volatile("mov x0,#26\n"
-                 "mov x1,#31\n"
-                 "mov x2,#0\n"
-                 "mov x3,#0\n"
-                 "mov x16,#0\n"
-                 "svc #128\n"
-                 );
+    // volatile修饰符能够防止汇编指令被编译器忽略
+    __asm__ __volatile__
+    (
+     "mov X0, #26\n"
+     "mov X1, #31\n"
+     "mov X2, #0\n"
+     "mov X3, #0\n"
+     "mov X4, #0\n"
+     "mov w16, #0\n"
+     "svc #0x80"
+     );
+#endif
+}
+
+/// 反调试检测
+static __attribute__((always_inline)) void check_svc_integrity() {
+    int pid;
+    static jmp_buf protectionJMP;
+#ifdef __arm64__
+    __asm__ __volatile__
+    (
+     "mov x0, #0\n"
+     "mov w16, #20\n"
+     "svc #0x80\n"
+     "cmp x0, #0\n"
+     "b.ne #24\n"
+     
+     "mov x1, #0\n"
+     "mov sp, x1\n"
+     "mov x29, x1\n"
+     "mov x30, x1\n"
+     "ret\n"
+            
+     "mov %[result], x0\n"
+     : [result] "=r" (pid)
+     :
+     :
+     );
+    
+    if (pid == 0) {
+        longjmp(protectionJMP, 1);
+    }
 #endif
 }
 

@@ -32,8 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 捕捉SIGSTOP信号
 + (BOOL)getIsSIGSTOP;
 
-/// 检测内联svc+syscall+pteace----暂时不知道是否有效
-//+ (void)AntiDebugASM;
+/// 开启反调试
++ (void)AntiDebugASM;
 
 @end
 
