@@ -40,7 +40,10 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        makeUI()
+//        makeUI()
+        
+        let vc = BViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: - privates methods

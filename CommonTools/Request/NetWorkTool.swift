@@ -10,7 +10,7 @@ import Alamofire
 
 //Network属性设置
 class Network {
-    
+     
     typealias SuccessHandlerType = ((NSDictionary) -> Void)
     typealias FailureHandlerType = ((Any?, String) ->Void)
     

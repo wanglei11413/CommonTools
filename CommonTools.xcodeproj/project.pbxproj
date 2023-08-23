@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0413F58B2A89B0EF00850C72 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413F58A2A89B0EF00850C72 /* BViewController.swift */; };
+		0413F58D2A89B0F600850C72 /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413F58C2A89B0F600850C72 /* CViewController.swift */; };
 		048BE3E92A0C786E00DB2B4F /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 048BE3E72A0C786E00DB2B4F /* Tools.m */; };
 		04B0482A2A2DCA1A00F7A12C /* SafetyProtection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B048282A2DCA1A00F7A12C /* SafetyProtection.m */; };
 		34E82E47B6420B598112372C /* Pods_CommonTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4244D8C90F61B47DE78997D /* Pods_CommonTools.framework */; };
@@ -72,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0413F58A2A89B0EF00850C72 /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
+		0413F58C2A89B0F600850C72 /* CViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
 		048BE3E72A0C786E00DB2B4F /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		048BE3E82A0C786E00DB2B4F /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		04B048282A2DCA1A00F7A12C /* SafetyProtection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafetyProtection.m; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 				45D1F7CE26FD816C00A98404 /* CommonTools.entitlements */,
 				45D1F77826FD769E00A98404 /* AppDelegate.swift */,
 				451446A92701B5C900FB0FB6 /* HomeViewController.swift */,
+				0413F58A2A89B0EF00850C72 /* BViewController.swift */,
+				0413F58C2A89B0F600850C72 /* CViewController.swift */,
 				451446A527019BA900FB0FB6 /* Model */,
 				45D1F7B126FD7FD900A98404 /* Resources */,
 				45D1F7AF26FD7FB300A98404 /* Config */,
@@ -517,12 +523,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				45144697270177D800FB0FB6 /* HUDTool.swift in Sources */,
+				0413F58D2A89B0F600850C72 /* CViewController.swift in Sources */,
 				451446912700416B00FB0FB6 /* BaseViewController.swift in Sources */,
 				451446942701779800FB0FB6 /* Block.swift in Sources */,
 				048BE3E92A0C786E00DB2B4F /* Tools.m in Sources */,
 				451446FB27043CB900FB0FB6 /* ApiSettings.swift in Sources */,
 				45D1F7E326FD83E400A98404 /* ExtensionTools.swift in Sources */,
 				451446AA2701B5C900FB0FB6 /* HomeViewController.swift in Sources */,
+				0413F58B2A89B0EF00850C72 /* BViewController.swift in Sources */,
 				45D1F7BB26FD808C00A98404 /* UIViewController+RTRootNavigationController.m in Sources */,
 				451446AC2701B88B00FB0FB6 /* WLCircleSlider.swift in Sources */,
 				45D1F7E626FDA0D100A98404 /* GCDTimerTool.swift in Sources */,
@@ -729,7 +737,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4643Q3U79P;
+				DEVELOPMENT_TEAM = 9HBKR82YF5;
 				INFOPLIST_FILE = CommonTools/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -757,7 +765,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4643Q3U79P;
+				DEVELOPMENT_TEAM = 9HBKR82YF5;
 				INFOPLIST_FILE = CommonTools/Config/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

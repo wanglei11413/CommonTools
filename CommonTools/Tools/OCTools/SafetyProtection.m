@@ -62,7 +62,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
         return NO;
     } else {
         // 使用了代理
-        DLog(@"使用了代理")
+        //DLog(@"使用了代理")
         return YES;
     }
 #endif
@@ -74,7 +74,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
     NSDictionary *info = [bundle infoDictionary];
     if ([info objectForKey:@"SignerIdentity"] != nil){
         //存在这个key，则说明被二次打包了
-        DLog(@"Mach-O被篡改，进行了二次打包")
+//        //DLog(@"Mach-O被篡改，进行了二次打包")
         return YES;
     }
     return NO;
@@ -102,7 +102,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
         NSString *hashStr = [tempData base64EncodedStringWithOptions:0];
         if (hashStr != nil &&
             ![PROVISION_HASH isEqualToString:hashStr]) {
-            DLog(@"签名文件被篡改，进行了二次打包")
+            //DLog(@"签名文件被篡改，进行了二次打包")
             return YES;
         }
     }
@@ -138,7 +138,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
                 // 对比签名ID
                 if (![appIdentifier isEqual:provisionID])
                 {
-                    DLog(@"teamID比对不一致，进行了二次签名")
+                    //DLog(@"teamID比对不一致，进行了二次签名")
                     return YES;
                 }
             }
@@ -151,7 +151,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
 {
     // 如果可以打开cydia，代表越狱了
     if ([UIApplication.sharedApplication canOpenURL:[NSURL URLWithString:@"cydia://"]]) {
-        DLog(@"为越狱设备")
+        //DLog(@"为越狱设备")
         return YES;
     }
     
@@ -163,7 +163,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
     for (int i = 0 ; i < pathArr.count ; i ++) {
         NSString *path = pathArr[i];
         if ([NSFileManager.defaultManager fileExistsAtPath:path]) {
-            DLog(@"为越狱设备")
+            //DLog(@"为越狱设备")
             return YES;
         }
     }
@@ -172,7 +172,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
     if ([NSFileManager.defaultManager fileExistsAtPath:appPath]) {
         NSArray *appList = [NSFileManager.defaultManager contentsOfDirectoryAtPath:appPath error:nil];
         if (appList.count > 0) {
-            DLog(@"为越狱设备")
+            //DLog(@"为越狱设备")
             return YES;
         }
     }
@@ -202,7 +202,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
     name[3] = getpid();
     if (sysctl(name, 4, &info, &info_size, NULL, 0) == -1) {
         perror("sysctl");
-        DLog(@"开启了sysctl--报错？")
+        //DLog(@"开启了sysctl--报错？")
         exit(EXIT_FAILURE);
     }
     // 是否存在调试器
@@ -212,7 +212,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
         a = (getenv("DYLD_INSERT_LIBRARIES") != NULL);
     }
     if (a) {
-        DLog(@"开启了sysctl")
+        //DLog(@"开启了sysctl")
     }
     return a;
 }
@@ -227,7 +227,7 @@ typedef int (*ptrace_ptr_t)(int _request, pid_t _pid, caddr_t _addr, int _data);
     dispatch_resume(source);
     
     if (result) {
-        DLog(@"捕捉到了SIGSTOP信号")
+        //DLog(@"捕捉到了SIGSTOP信号")
     }
     return result;
 }
